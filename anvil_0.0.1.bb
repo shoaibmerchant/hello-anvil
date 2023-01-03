@@ -7,11 +7,11 @@ inherit cargo
 
 # how to get anvil could be as easy as but default to a git checkout:
 # SRC_URI += "crate://crates.io/anvil/0.0.1"
-SRC_URI += ""
-SRCREV = ""
+SRC_URI += "git://git@github.com/shoaibmerchant/hello-anvil.git;protocol=ssh;nobranch=1;branch=main"
+SRCREV = "ef264c606cc1e7e12ba07ddec6920be88367e222"
 S = "${WORKDIR}/git"
 CARGO_SRC_DIR = ""
-
+PV:append = ".AUTOINC+ef264c606c"
 
 # please note if you have entries that do not begin with crate://
 # you must change them to how that package can be fetched
