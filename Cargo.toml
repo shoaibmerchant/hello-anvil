@@ -23,7 +23,8 @@ slog-scope = "4.4.0"
 xkbcommon = "0.4.0"
 
 [dependencies.smithay]
-version = "0.3.0"
+git = "https://github.com/shoaibmerchant/smithay"
+branch = "imx-fix"
 default-features = false
 features = [ "wayland_frontend", "slog-stdlog" ]
 

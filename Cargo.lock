@@ -1385,8 +1385,7 @@ checksum = "a507befe795404456341dfab10cef66ead4c041f62b8b11bbb92bffe5d0953e0"
 [[package]]
 name = "smithay"
 version = "0.3.0"
-source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "524a70d391cdbcca9a3b56bd357620c95f89a365c326c99c0bf03974f923d5df"
+source = "git+https://github.com/shoaibmerchant/smithay?branch=imx-fix#43877314bbd11d163cbedc45225d9b38ea3d82c9"
 dependencies = [
  "appendlist",
  "bitflags",

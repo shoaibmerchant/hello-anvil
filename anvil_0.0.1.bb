@@ -8,10 +8,10 @@ inherit cargo
 # how to get anvil could be as easy as but default to a git checkout:
 # SRC_URI += "crate://crates.io/anvil/0.0.1"
 SRC_URI += "git://git@github.com/shoaibmerchant/hello-anvil.git;protocol=ssh;nobranch=1;branch=main"
-SRCREV = "f6f0b2aa2df53d56324b55c556cec8c9c44770d2"
+SRCREV = "0a3e2c8cee122f5c285b064aa448919d8e9d93ee"
 S = "${WORKDIR}/git"
 CARGO_SRC_DIR = ""
-PV:append = ".AUTOINC+f6f0b2aa2d"
+PV:append = ".AUTOINC+0a3e2c8cee"
 
 # please note if you have entries that do not begin with crate://
 # you must change them to how that package can be fetched
@@ -163,7 +163,6 @@ SRC_URI += " \
     crate://crates.io/slog/2.7.0 \
     crate://crates.io/smallvec/1.10.0 \
     crate://crates.io/smithay-client-toolkit/0.12.3 \
-    crate://crates.io/smithay/0.3.0 \
     crate://crates.io/strsim/0.9.3 \
     crate://crates.io/syn/1.0.107 \
     crate://crates.io/take_mut/0.2.2 \
@@ -206,9 +205,12 @@ SRC_URI += " \
     crate://crates.io/xdg/2.4.1 \
     crate://crates.io/xkbcommon/0.4.1 \
     crate://crates.io/xml-rs/0.8.4 \
+    git://github.com/shoaibmerchant/smithay;protocol=https;nobranch=1;name=smithay;destsuffix=smithay \
 "
 
-
+SRCREV_FORMAT .= "_smithay"
+SRCREV_smithay = "imx-fix"
+EXTRA_OECARGO_PATHS += "${WORKDIR}/smithay"
 
 # FIXME: update generateme with the real MD5 of the license file
 LIC_FILES_CHKSUM = " \
