@@ -8,10 +8,10 @@ inherit cargo
 # how to get anvil could be as easy as but default to a git checkout:
 # SRC_URI += "crate://crates.io/anvil/0.0.1"
 SRC_URI += "git://git@github.com/shoaibmerchant/hello-anvil.git;protocol=ssh;nobranch=1;branch=main"
-SRCREV = "dbc2f85f5c8f90cb248d35f84714f895466a2b12"
+SRCREV = "f6f0b2aa2df53d56324b55c556cec8c9c44770d2"
 S = "${WORKDIR}/git"
 CARGO_SRC_DIR = ""
-PV:append = ".AUTOINC+dbc2f85f5c"
+PV:append = ".AUTOINC+f6f0b2aa2d"
 
 # please note if you have entries that do not begin with crate://
 # you must change them to how that package can be fetched
@@ -77,6 +77,8 @@ SRC_URI += " \
     crate://crates.io/foreign-types-shared/0.1.1 \
     crate://crates.io/foreign-types/0.3.2 \
     crate://crates.io/fps_ticker/1.0.0 \
+    crate://crates.io/gbm-sys/0.2.2 \
+    crate://crates.io/gbm/0.7.0 \
     crate://crates.io/gethostname/0.2.3 \
     crate://crates.io/getrandom/0.2.8 \
     crate://crates.io/gl_generator/0.14.0 \
